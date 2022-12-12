@@ -9,7 +9,7 @@ export enum Category {
   SetTheory = 'SetTheory',
   Relation = 'Relation',
   Calculus = 'Calculus'
-  // Arrow = 'Arrow',
+  Arrow = 'Arrow',
   BigO = 'BigO',
   Dots = 'Dots',
   Angle = 'Angle',
@@ -168,6 +168,69 @@ export const expressions: Expression[] = [
     search: "",
     tags: [Category.Function, Category.Trigonometric],
   },
+
+  // Arrows
+  {
+    name: "left arrow",
+    formula: `\\leftarrow, \\longleftarrow, \\Leftarrow, \\Longleftarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "right arrow",
+    formula: `\\rightarrow \\longrightarrow, \\Rightarrow, \\Longrightarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "up arrow",
+    formula: `\\uparrow, \\Uparrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "down arrow",
+    formula: `\\downarrow, \\Downarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "left and right arrow",
+    formula: `\\leftrightarrow, \\longleftrightarrow, \\Leftrightarrow, \\Longleftrightarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Up and down arrow",
+    formula: `\\updownarrow, \\Updownarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "maplet arrow / maps to",
+    formula: `\\mapsto, \\longmapsto`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Hook arrow",
+    formula: `\\hookletarrow, \\hookrightarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Harpoon arrows",
+    formula: `\\leftharpoonup, \\rightharpoonup, \\leftharpoondown, \\rightharpoondown`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Ordinal or Intercardinal direction arrows",
+    formula: `\\nearrow, \\searrow, \\swarrow, \\nwarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+
 
   // Logic
   {
@@ -417,7 +480,7 @@ export const expressions: Expression[] = [
   },
   {
     name: "Partial Derivative",
-    formula: `\\frac{\\partial Q}{\\partial t}`,
+    formula: `\\frac{\\partial Q}{\\partial t}, \\frac{\\partial^2L}{\\partial x \\partial y}`,
     search: "",
     tags: ["Category.Calculus"],
   },
