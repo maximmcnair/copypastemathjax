@@ -2,6 +2,7 @@
   export let name;
   export let formula;
   export let search;
+  export let tags;
 
   import katex from "katex";
 
@@ -16,7 +17,7 @@
     }, 1000);
   }
 
-  const formulaHtml = katex.renderToString(formula.trim(), {
+  $: formulaHtml = katex.renderToString(formula.trim(), {
     throwOnError: false,
     displayMode: true,
   });
@@ -111,13 +112,5 @@
     position: absolute;
     bottom: 5px;
     right: 5px;
-  }
-
-  .formula-search-error {
-    margin-top: 10px;
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
   }
 </style>

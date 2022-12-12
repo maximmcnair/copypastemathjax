@@ -12,18 +12,35 @@
 </svelte:head>
 
 <script lang="ts">
-  import {expressions} from '../lib/expressions.ts'
+  import { expressions, Category } from '../lib/expressions.ts'
   import Expression from '../components/Expression.svelte'
 
   let search = '';
+  let activeCategories = [];
+
+  function toggleCategory(category){
+    if (activeCategories.includes(category)){
+      activeCategories = activeCategories.filter((c) => {
+        if (category === c) return false;
+        return true;
+      });
+    } else {
+      activeCategories = [...activeCategories, category];
+    }
+  }
 
   function setSearch(str: string){
     search = str;
   }
 
-  $: filteredExpressions = expressions.filter(({ name = "" }) => {
-    return name.toLowerCase().includes(search.toLowerCase());
+  $: filteredExpressions = expressions.filter(({ name = "", tags }) => {
+    const isInSearch = name.toLowerCase().includes(search.toLowerCase());
+    const isInCategory = activeCategories.length === 0 ?
+      true : activeCategories.filter(x => tags.includes(x)).length > 0; 
+    return isInSearch && isInCategory;
   });
+
+  const categories = Object.keys(Category).filter((v) => isNaN(Number(v)));
 </script>
 
 <nav class="math-nav">
@@ -52,6 +69,12 @@
       bind:value={search}
       placeholder="Search for expressions..."
     />
+  </div>
+
+  <div class="math-categories">
+    {#each categories as category}
+      <div class="math-category" on:click={() => toggleCategory(category)} data-active={activeCategories.includes(category)}>{category}</div>
+    {/each}
   </div>
 
   <div class="formulas">
@@ -125,6 +148,26 @@
     transition: all 0.1s;
   }
 
+  .math-categories {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    overflow-x: scroll;
+  }
+
+  .math-category {
+    background: var(--color-grey-dark);
+    color: var(--color-grey-white);
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .math-category[data-active=true] {
+    background: var(--color-white);
+    color: var(--color-grey-dark);
+  }
+
   .math-search::placeholder {
     color: var(--color-grey);
   }
@@ -163,5 +206,13 @@
     .formulas {
       grid-template-columns: repeat(5, 1fr);
     }
+  }
+
+  .formula-search-error {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
   }
 </style>
