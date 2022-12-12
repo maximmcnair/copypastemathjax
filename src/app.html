@@ -10,3 +10,240 @@
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
+
+<style>
+  /* Mona Sans */
+  @font-face {
+    font-family: "Mona Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/type/Mona-Sans.woff2") format("woff2"),
+      url("/type/Mona-Sans.woff") format("woff");
+  }
+
+  body{
+    font-family: 'Mona Sans';
+  }
+
+  :root {
+    --color-white: #f7f7f7;
+    --color-grey: #4d4d4d;
+    --color-grey-light: #797979;
+    --color-grey-lighter: #cecece;
+    --color-grey-dark: #1d1f20;
+    --color-grey-darker: #131515;
+    --color-black: #0d0d0d;
+    --color-gold: #d09f69;
+
+    --color-red: #ff5965;
+
+    --color-text: var(--color-white);
+    --color-bg: var(--color-black);
+
+    --typesize-h1: 2.488rem;
+    --typesize-h2: 2.074rem;
+    --typesize-h3: 1.728rem;
+    --typesize-h4: 1.44rem;
+    --typesize-h5: 1.2rem;
+    --typesize-body: 1rem;
+    --typesize-small: 0.8rem;
+
+    --typeweight-thin: 100;
+    --typeweight-medium: 400;
+    --typeweight-bold: 600;
+
+    --typeface-title: 'Mona Sans';
+    --typeface-body: 'Mona Sans';
+
+    --type-lineheight-h1: 1.5;
+    --type-lineheight-h2: 1.5;
+    --type-lineheight-h3: 1.5;
+    --type-lineheight-h4: 1.5;
+    --type-lineheight-h5: 1.5;
+    --type-lineheight-h6: 1.5;
+    --type-lineheight-body: 1.75;
+    --type-lineheight-small: 1.75;
+  }
+
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0px;
+    background: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  ::selection {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+  }
+
+  a,
+  a:visited {
+    color: var(--color-gold);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  img,
+  video {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  /* typography */
+  html {
+    /* 18px */
+    font-size: 112.5%;
+  }
+
+  body {
+    line-height: 1.5;
+    font-family: var(--typeface-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: var(--typeface-title);
+    line-height: 1.75;
+    font-weight: 500;
+  }
+
+  h1,
+  .h1 {
+    margin-top: 0;
+    font-size: var(--typesize-h1);
+  }
+
+  h2,
+  .h2 {
+    font-size: var(--typesize-h2);
+  }
+
+  h3,
+  .h3 {
+    font-size: var(--typesize-h3);
+  }
+
+  h4,
+  .h4 {
+    font-size: var(--typesize-h4);
+  }
+
+  h5,
+  .h5,
+  .p-intro {
+    font-size: var(--typesize-h5);
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  small,
+  .small {
+    font-size: var(--typesize-small);
+  }
+
+  strong {
+    color: var(--color-gold);
+  }
+
+  pre {
+    padding: 10px;
+  }
+
+  code,
+  .type_code {
+    font-family: "Source Code Pro", monospace;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-black);
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: var(--color-black);
+  }
+
+  ::-webkit-scrollbar-thumb:vertical {
+    background-color: var(--color-grey);
+  }
+
+  select {
+    appearance: none;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    padding: 10px 45px 10px 15px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: var(--typesize-body);
+  }
+
+  .select-wrap {
+    position: relative;
+    display: inline-block;
+  }
+  .select-wrap::after {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    background-image: url("/chevron-down.svg");
+    display: block;
+    z-index: 99999;
+    position: absolute;
+    top: 12px;
+    right: 14px;
+  }
+
+  button {
+    appearance: none;
+    border: none;
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-grey-light);
+    color: var(--color-white);
+    font-size: var(--typesize-small);
+    font-weight: var(--typeweight-bold);
+    text-transform: uppercase;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  button:hover {
+    border-color: var(--color-white);
+    color: var(--color-white);
+  }
+  button:active {
+    transform: translate(0px, 1px);
+  }
+</style>
