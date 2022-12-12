@@ -49,8 +49,7 @@
   <div class="math-search-wrapper">
     <input
       class="math-search"
-      value={search}
-      on:change={(e) => setSearch(e.target.value)}
+      bind:value={search}
       placeholder="Search for expressions..."
     />
   </div>

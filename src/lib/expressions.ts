@@ -5,6 +5,13 @@ export interface Expression {
 }
 
 export const expressions: Expression[] = [
+  // Use this template to add
+  // {
+  //   name: "",
+  //   formula: ``,
+  //   search: "",
+  // },
+
   // Operators
   {
     name: "Times",
@@ -585,11 +592,4 @@ export const expressions: Expression[] = [
     formula: `\\omega`,
     search: "",
   },
-
-  // Use this template to add
-  // {
-  //   name: "",
-  //   formula: ``,
-  //   search: "",
-  // },
 ];
