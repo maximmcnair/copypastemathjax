@@ -8,6 +8,7 @@ export enum Category {
   Logic = 'Logic',
   SetTheory = 'SetTheory',
   Relation = 'Relation',
+  Calculus = 'Calculus'
   // Arrow = 'Arrow',
   BigO = 'BigO',
   Dots = 'Dots',
@@ -102,6 +103,12 @@ export const expressions: Expression[] = [
   {
     name: "Much greater than",
     formula: `\\gg`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Function assignment",
+    formula: `\\mathrel{\\mathop:}=`,
     search: "",
     tags: [Category.Relation],
   },
@@ -404,9 +411,15 @@ export const expressions: Expression[] = [
   },
   {
     name: "Integrals with limits",
-    formula: `\\int\\limits_{-\\infty}^{\\infty}f(x)dx`,
+    formula: `\\int\\limits_{-\\infty}^{\\infty}f(x)\\mathrm{d}\,x`,
     search: "",
-    tags: [""],
+    tags: ["Category.Calculus"],
+  },
+  {
+    name: "Partial Derivative",
+    formula: `\\frac{\\partial Q}{\\partial t}`,
+    search: "",
+    tags: ["Category.Calculus"],
   },
   {
     name: "Limits",
@@ -504,6 +517,18 @@ export const expressions: Expression[] = [
     tags: [Category.Symbol],
   },
   {
+    name: "dagger",
+    formula: `\\dag`,
+    search: "",
+    tags: [Category.Symbol],
+  },
+  {
+    name: "double dagger",
+    formula: `\\ddag`,
+    search: "",
+    tags: [Category.Symbol],
+  },
+  {
     name: "oplus",
     formula: `\\oplus`,
     search: "",
@@ -597,8 +622,8 @@ export const expressions: Expression[] = [
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "epsilon",
-    formula: `\\epsilon `,
+    name: "epsilon and varepsilon",
+    formula: `\\epsilon, \\varepsilon`,
     search: "greek",
     tags: [Category.GreekLetter, Category.Symbol],
   },
@@ -615,8 +640,8 @@ export const expressions: Expression[] = [
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "theta",
-    formula: `\\theta`,
+    name: "theta and vartheta",
+    formula: `\\theta, \\vartheta`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
@@ -627,8 +652,8 @@ export const expressions: Expression[] = [
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "kappa",
-    formula: `\\kappa`,
+    name: "kappa and varkappa",
+    formula: `\\kappa, \\varkappa`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
@@ -663,20 +688,20 @@ export const expressions: Expression[] = [
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "pi",
-    formula: `\\pi`,
+    name: "pi and varpi",
+    formula: `\\pi, \\varpi`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "rho",
-    formula: `\\rho`,
+    name: "rho and varrho",
+    formula: `\\rho, \\varrho`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "sigma",
-    formula: `\\sigma`,
+    name: "sigma and varsigmna",
+    formula: `\\sigma, \\varsigma`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
@@ -693,8 +718,8 @@ export const expressions: Expression[] = [
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "phi",
-    formula: `\\phi`,
+    name: "phi and varphi",
+    formula: `\\phi, \\varphi`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
@@ -762,7 +787,7 @@ export const expressions: Expression[] = [
   },
   {
     name: "Logarithmic Time",
-    formula: `O(\log{}n)`,
+    formula: `O(\\log{}n)`,
     search: "",
     tags: [Category.BigO],
   },
@@ -774,7 +799,7 @@ export const expressions: Expression[] = [
   },
   {
     name: "Quasilinear Time",
-    formula: `O(n\log{}n)`,
+    formula: `O(n\\log{}n)`,
     search: "",
     tags: [Category.BigO],
   },
