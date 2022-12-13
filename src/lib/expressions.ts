@@ -28,7 +28,8 @@ export const expressions: Expression[] = [
   // {
   //   name: "",
   //   formula: ``,
-  //   tags: [""],
+  //   search: '',
+  //   tags: [],
   // },
 
   // Operators
