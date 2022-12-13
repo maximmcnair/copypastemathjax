@@ -8,7 +8,7 @@ export enum Category {
   Logic = 'Logic',
   SetTheory = 'SetTheory',
   Relation = 'Relation',
-  Calculus = 'Calculus'
+  Calculus = 'Calculus',
   Arrow = 'Arrow',
   BigO = 'BigO',
   Dots = 'Dots',
@@ -241,7 +241,7 @@ export const expressions: Expression[] = [
   },
   {
     name: "Exists",
-    formula: `\\exists `,
+    formula: `\\exists`,
     search: "",
     tags: [Category.Logic, Category.SetTheory],
   },
@@ -476,13 +476,13 @@ export const expressions: Expression[] = [
     name: "Integrals with limits",
     formula: `\\int\\limits_{-\\infty}^{\\infty}f(x)\\mathrm{d}\,x`,
     search: "",
-    tags: ["Category.Calculus"],
+    tags: [Category.Calculus],
   },
   {
     name: "Partial Derivative",
     formula: `\\frac{\\partial Q}{\\partial t}, \\frac{\\partial^2L}{\\partial x \\partial y}`,
     search: "",
-    tags: ["Category.Calculus"],
+    tags: [Category.Calculus],
   },
   {
     name: "Limits",
