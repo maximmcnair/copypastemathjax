@@ -33,7 +33,6 @@ export const expressions: Expression[] = [
   //   search: '',
   //   tags: [],
   // },
-main
 
   // Operators
   {
@@ -181,7 +180,7 @@ main
   },
   {
     name: "right arrow",
-    formula: `\\rightarrow \\longrightarrow, \\Rightarrow, \\Longrightarrow`,
+    formula: `\\rightarrow, \\longrightarrow, \\Rightarrow, \\Longrightarrow`,
     search: "",
     tags: [Category.Arrow],
   },
