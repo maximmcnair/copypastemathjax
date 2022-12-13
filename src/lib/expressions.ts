@@ -214,7 +214,7 @@ export const expressions: Expression[] = [
   },
   {
     name: "Hook arrow",
-    formula: `\\hookletarrow, \\hookrightarrow`,
+    formula: `\\hookleftarrow, \\hookrightarrow`,
     search: "",
     tags: [Category.Arrow],
   },
