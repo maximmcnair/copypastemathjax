@@ -4,6 +4,7 @@ export enum Category {
   GreekLetter = 'GreekLetter',
   // Letter = 'Letter',
   Symbol = 'Symbol',
+  Formula = 'Formula',
   // Equation = 'Equation',
   Logic = 'Logic',
   SetTheory = 'SetTheory',
@@ -31,138 +32,6 @@ export const expressions: Expression[] = [
   //   search: '',
   //   tags: [],
   // },
-
-  // Operators
-  {
-    name: "Times",
-    formula: `\\times`,
-    search: "",
-    tags: [Category.Operator],
-  },
-  {
-    name: "Dot",
-    formula: `\\cdot`,
-    search: "",
-    tags: [Category.Operator],
-  },
-  {
-    name: "Division",
-    formula: `\\div`,
-    search: "",
-    tags: [Category.Operator],
-  },
-  {
-    name: "Plus minus",
-    formula: `\\pm `,
-    search: "",
-    tags: [Category.Operator],
-  },
-  // Relation
-  {
-    name: "Not equal",
-    formula: `\\neq`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Approximately equal",
-    formula: `\\approx`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Less than",
-    formula: `\\lt`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Less than or equal",
-    formula: `\\leq`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Greater than",
-    formula: `\\gt`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Greater than or equal",
-    formula: `\\geq`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Much less than",
-    formula: `\\ll`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Much greater than",
-    formula: `\\gg`,
-    search: "",
-    tags: [Category.Relation],
-  },
-
-  // Trigonometric
-  {
-    name: "sin",
-    formula: `\\sin \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "cos",
-    formula: `\\cos \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "tan",
-    formula: `\\tan \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "cot ",
-    formula: `\\cot \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "sec ",
-    formula: `\\sec \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "csc",
-    formula: `\\csc \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "arcsin",
-    formula: `\\arcsin \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "arccos",
-    formula: `\\arccos \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "arctan",
-    formula: `\\arctan \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-
   // Logic
   {
     name: "For all",
@@ -291,6 +160,52 @@ export const expressions: Expression[] = [
     formula: `\\mathbb{I}`,
     search: "",
     tags: [Category.Logic, Category.SetTheory],
+  },
+  // Formulas
+  {
+    name: "Pythagoras Theorem",
+    formula: `a^2 + b^2 = c^2`,
+    search: "",
+    tags: [Category.Formula],
+  },
+  {
+    name: "Theory of Relativity",
+    formula: `E = mc^2`,
+    search: "",
+    tags: [Category.Formula],
+  },
+  {
+    name: "Euler's Identity",
+    formula: `e^{i\\pi} + 1 = 0`,
+    search: "",
+    tags: [Category.Formula],
+  },
+  {
+    name: "Euler's formula for polyhdra",
+    formula: `F - E + V = 2`,
+    search: "",
+    tags: [Category.Formula],
+  },
+  {
+    name: "Newton's law of gravity",
+    formula: `F = G\\frac{m_1 m_2}{d^2}`,
+    search: "",
+    tags: [Category.Formula],
+  },
+  {
+    name: "Origin of complex numbers",
+    formula: `i^2 = -1`,
+    search: "",
+    tags: [Category.Formula],
+  },
+  { 
+    name: "de Morgan's Laws",
+    formula: `\\begin{align}
+\\left ( E \\cup F \\right )' = E' \\cap  F' \\\\
+\\left ( E \\cap F \\right )' = E' \\cup  F'
+\\end{align}`,
+    search: "",
+    tags: [Category.Formula],
   },
 
   // misc
@@ -797,4 +712,135 @@ export const expressions: Expression[] = [
     search: "",
     tags: [Category.BigO],
   },
+  // Operators
+  {
+    name: "Times",
+    formula: `\\times`,
+    search: "",
+    tags: [Category.Operator],
+  },
+  {
+    name: "Dot",
+    formula: `\\cdot`,
+    search: "",
+    tags: [Category.Operator],
+  },
+  {
+    name: "Division",
+    formula: `\\div`,
+    search: "",
+    tags: [Category.Operator],
+  },
+  {
+    name: "Plus minus",
+    formula: `\\pm `,
+    search: "",
+    tags: [Category.Operator],
+  },
+  // Relation
+  {
+    name: "Not equal",
+    formula: `\\neq`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Approximately equal",
+    formula: `\\approx`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Less than",
+    formula: `\\lt`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Less than or equal",
+    formula: `\\leq`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Greater than",
+    formula: `\\gt`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Greater than or equal",
+    formula: `\\geq`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Much less than",
+    formula: `\\ll`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Much greater than",
+    formula: `\\gg`,
+    search: "",
+    tags: [Category.Relation],
+  },
+
+  // Trigonometric
+  {
+    name: "sin",
+    formula: `\\sin \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "cos",
+    formula: `\\cos \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "tan",
+    formula: `\\tan \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "cot ",
+    formula: `\\cot \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "sec ",
+    formula: `\\sec \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "csc",
+    formula: `\\csc \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "arcsin",
+    formula: `\\arcsin \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "arccos",
+    formula: `\\arccos \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "arctan",
+    formula: `\\arctan \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+
 ];
