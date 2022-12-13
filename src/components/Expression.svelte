@@ -70,6 +70,7 @@
     text-align: center;
     padding: 5px;
     font-size: 20px;
+    overflow-x: scroll;
   }
 
   .formula-code {
