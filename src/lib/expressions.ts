@@ -181,7 +181,7 @@ export const expressions: Expression[] = [
     tags: [Category.Formula],
   },
   {
-    name: "Euler's formula for polyhdra",
+    name: "Euler's polyhedron formula",
     formula: `F - E + V = 2`,
     search: "",
     tags: [Category.Formula],
