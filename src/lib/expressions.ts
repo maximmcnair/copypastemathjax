@@ -9,7 +9,8 @@ export enum Category {
   Logic = 'Logic',
   SetTheory = 'SetTheory',
   Relation = 'Relation',
-  // Arrow = 'Arrow',
+  Calculus = 'Calculus',
+  Arrow = 'Arrow',
   BigO = 'BigO',
   Dots = 'Dots',
   Angle = 'Angle',
@@ -32,6 +33,206 @@ export const expressions: Expression[] = [
   //   search: '',
   //   tags: [],
   // },
+
+  // Operators
+  {
+    name: "Times",
+    formula: `\\times`,
+    search: "",
+    tags: [Category.Operator],
+  },
+  {
+    name: "Dot",
+    formula: `\\cdot`,
+    search: "",
+    tags: [Category.Operator],
+  },
+  {
+    name: "Division",
+    formula: `\\div`,
+    search: "",
+    tags: [Category.Operator],
+  },
+  {
+    name: "Plus minus",
+    formula: `\\pm `,
+    search: "",
+    tags: [Category.Operator],
+  },
+  // Relation
+  {
+    name: "Not equal",
+    formula: `\\neq`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Approximately equal",
+    formula: `\\approx`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Less than",
+    formula: `\\lt`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Less than or equal",
+    formula: `\\leq`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Greater than",
+    formula: `\\gt`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Greater than or equal",
+    formula: `\\geq`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Much less than",
+    formula: `\\ll`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Much greater than",
+    formula: `\\gg`,
+    search: "",
+    tags: [Category.Relation],
+  },
+  {
+    name: "Function assignment",
+    formula: `\\mathrel{\\mathop:}=`,
+    search: "",
+    tags: [Category.Relation],
+  },
+
+  // Trigonometric
+  {
+    name: "sin",
+    formula: `\\sin \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "cos",
+    formula: `\\cos \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "tan",
+    formula: `\\tan \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "cot ",
+    formula: `\\cot \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "sec ",
+    formula: `\\sec \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "csc",
+    formula: `\\csc \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "arcsin",
+    formula: `\\arcsin \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "arccos",
+    formula: `\\arccos \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+  {
+    name: "arctan",
+    formula: `\\arctan \\theta`,
+    search: "",
+    tags: [Category.Function, Category.Trigonometric],
+  },
+
+  // Arrows
+  {
+    name: "left arrow",
+    formula: `\\leftarrow, \\longleftarrow, \\Leftarrow, \\Longleftarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "right arrow",
+    formula: `\\rightarrow, \\longrightarrow, \\Rightarrow, \\Longrightarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "up arrow",
+    formula: `\\uparrow, \\Uparrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "down arrow",
+    formula: `\\downarrow, \\Downarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "left and right arrow",
+    formula: `\\leftrightarrow, \\longleftrightarrow, \\Leftrightarrow, \\Longleftrightarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Up and down arrow",
+    formula: `\\updownarrow, \\Updownarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "maplet arrow / maps to",
+    formula: `\\mapsto, \\longmapsto`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Hook arrow",
+    formula: `\\hookleftarrow, \\hookrightarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Harpoon arrows",
+    formula: `\\leftharpoonup, \\rightharpoonup, \\leftharpoondown, \\rightharpoondown`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Ordinal or Intercardinal direction arrows",
+    formula: `\\nearrow, \\searrow, \\swarrow, \\nwarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+
   // Logic
   {
     name: "For all",
@@ -41,7 +242,7 @@ export const expressions: Expression[] = [
   },
   {
     name: "Exists",
-    formula: `\\exists `,
+    formula: `\\exists`,
     search: "",
     tags: [Category.Logic, Category.SetTheory],
   },
@@ -320,9 +521,15 @@ export const expressions: Expression[] = [
   },
   {
     name: "Integrals with limits",
-    formula: `\\int\\limits_{-\\infty}^{\\infty}f(x)dx`,
+    formula: `\\int\\limits_{-\\infty}^{\\infty}f(x)\\,\\mathrm{d}x`,
     search: "",
-    tags: [""],
+    tags: [Category.Calculus],
+  },
+  {
+    name: "Partial Derivative",
+    formula: `\\frac{\\partial Q}{\\partial t}, \\frac{\\partial^2L}{\\partial x \\partial y}`,
+    search: "",
+    tags: [Category.Calculus],
   },
   {
     name: "Limits",
@@ -420,6 +627,18 @@ export const expressions: Expression[] = [
     tags: [Category.Symbol],
   },
   {
+    name: "dagger",
+    formula: `\\dag`,
+    search: "",
+    tags: [Category.Symbol],
+  },
+  {
+    name: "double dagger",
+    formula: `\\ddag`,
+    search: "",
+    tags: [Category.Symbol],
+  },
+  {
     name: "oplus",
     formula: `\\oplus`,
     search: "",
@@ -513,8 +732,8 @@ export const expressions: Expression[] = [
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "epsilon",
-    formula: `\\epsilon `,
+    name: "epsilon and varepsilon",
+    formula: `\\epsilon, \\varepsilon`,
     search: "greek",
     tags: [Category.GreekLetter, Category.Symbol],
   },
@@ -531,8 +750,8 @@ export const expressions: Expression[] = [
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "theta",
-    formula: `\\theta`,
+    name: "theta and vartheta",
+    formula: `\\theta, \\vartheta`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
@@ -543,8 +762,8 @@ export const expressions: Expression[] = [
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "kappa",
-    formula: `\\kappa`,
+    name: "kappa and varkappa",
+    formula: `\\kappa, \\varkappa`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
@@ -579,20 +798,20 @@ export const expressions: Expression[] = [
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "pi",
-    formula: `\\pi`,
+    name: "pi and varpi",
+    formula: `\\pi, \\varpi`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "rho",
-    formula: `\\rho`,
+    name: "rho and varrho",
+    formula: `\\rho, \\varrho`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "sigma",
-    formula: `\\sigma`,
+    name: "sigma and varsigmna",
+    formula: `\\sigma, \\varsigma`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
@@ -609,8 +828,8 @@ export const expressions: Expression[] = [
     tags: [Category.GreekLetter, Category.Symbol],
   },
   {
-    name: "phi",
-    formula: `\\phi`,
+    name: "phi and varphi",
+    formula: `\\phi, \\varphi`,
     search: "",
     tags: [Category.GreekLetter, Category.Symbol],
   },
@@ -678,7 +897,7 @@ export const expressions: Expression[] = [
   },
   {
     name: "Logarithmic Time",
-    formula: `O(\log{}n)`,
+    formula: `O(\\log{}n)`,
     search: "",
     tags: [Category.BigO],
   },
@@ -690,7 +909,7 @@ export const expressions: Expression[] = [
   },
   {
     name: "Quasilinear Time",
-    formula: `O(n\log{}n)`,
+    formula: `O(n\\log{}n)`,
     search: "",
     tags: [Category.BigO],
   },
