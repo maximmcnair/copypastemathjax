@@ -521,7 +521,7 @@ export const expressions: Expression[] = [
   },
   {
     name: "Integrals with limits",
-    formula: `\\int\\limits_{-\\infty}^{\\infty}f(x)\\mathrm{d}\,x`,
+    formula: `\\int\\limits_{-\\infty}^{\\infty}f(x)\\,\\mathrm{d}x`,
     search: "",
     tags: [Category.Calculus],
   },
