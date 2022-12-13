@@ -34,205 +34,6 @@ export const expressions: Expression[] = [
   //   tags: [],
   // },
 
-  // Operators
-  {
-    name: "Times",
-    formula: `\\times`,
-    search: "",
-    tags: [Category.Operator],
-  },
-  {
-    name: "Dot",
-    formula: `\\cdot`,
-    search: "",
-    tags: [Category.Operator],
-  },
-  {
-    name: "Division",
-    formula: `\\div`,
-    search: "",
-    tags: [Category.Operator],
-  },
-  {
-    name: "Plus minus",
-    formula: `\\pm `,
-    search: "",
-    tags: [Category.Operator],
-  },
-  // Relation
-  {
-    name: "Not equal",
-    formula: `\\neq`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Approximately equal",
-    formula: `\\approx`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Less than",
-    formula: `\\lt`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Less than or equal",
-    formula: `\\leq`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Greater than",
-    formula: `\\gt`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Greater than or equal",
-    formula: `\\geq`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Much less than",
-    formula: `\\ll`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Much greater than",
-    formula: `\\gg`,
-    search: "",
-    tags: [Category.Relation],
-  },
-  {
-    name: "Function assignment",
-    formula: `\\mathrel{\\mathop:}=`,
-    search: "",
-    tags: [Category.Relation],
-  },
-
-  // Trigonometric
-  {
-    name: "sin",
-    formula: `\\sin \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "cos",
-    formula: `\\cos \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "tan",
-    formula: `\\tan \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "cot ",
-    formula: `\\cot \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "sec ",
-    formula: `\\sec \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "csc",
-    formula: `\\csc \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "arcsin",
-    formula: `\\arcsin \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "arccos",
-    formula: `\\arccos \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-  {
-    name: "arctan",
-    formula: `\\arctan \\theta`,
-    search: "",
-    tags: [Category.Function, Category.Trigonometric],
-  },
-
-  // Arrows
-  {
-    name: "left arrow",
-    formula: `\\leftarrow, \\longleftarrow, \\Leftarrow, \\Longleftarrow`,
-    search: "",
-    tags: [Category.Arrow],
-  },
-  {
-    name: "right arrow",
-    formula: `\\rightarrow, \\longrightarrow, \\Rightarrow, \\Longrightarrow`,
-    search: "",
-    tags: [Category.Arrow],
-  },
-  {
-    name: "up arrow",
-    formula: `\\uparrow, \\Uparrow`,
-    search: "",
-    tags: [Category.Arrow],
-  },
-  {
-    name: "down arrow",
-    formula: `\\downarrow, \\Downarrow`,
-    search: "",
-    tags: [Category.Arrow],
-  },
-  {
-    name: "left and right arrow",
-    formula: `\\leftrightarrow, \\longleftrightarrow, \\Leftrightarrow, \\Longleftrightarrow`,
-    search: "",
-    tags: [Category.Arrow],
-  },
-  {
-    name: "Up and down arrow",
-    formula: `\\updownarrow, \\Updownarrow`,
-    search: "",
-    tags: [Category.Arrow],
-  },
-  {
-    name: "maplet arrow / maps to",
-    formula: `\\mapsto, \\longmapsto`,
-    search: "",
-    tags: [Category.Arrow],
-  },
-  {
-    name: "Hook arrow",
-    formula: `\\hookleftarrow, \\hookrightarrow`,
-    search: "",
-    tags: [Category.Arrow],
-  },
-  {
-    name: "Harpoon arrows",
-    formula: `\\leftharpoonup, \\rightharpoonup, \\leftharpoondown, \\rightharpoondown`,
-    search: "",
-    tags: [Category.Arrow],
-  },
-  {
-    name: "Ordinal or Intercardinal direction arrows",
-    formula: `\\nearrow, \\searrow, \\swarrow, \\nwarrow`,
-    search: "",
-    tags: [Category.Arrow],
-  },
-
   // Logic
   {
     name: "For all",
@@ -362,6 +163,68 @@ export const expressions: Expression[] = [
     search: "",
     tags: [Category.Logic, Category.SetTheory],
   },
+  // Arrows
+  {
+    name: "Left arrow",
+    formula: `\\leftarrow, \\longleftarrow, \\Leftarrow, \\Longleftarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Right arrow",
+    formula: `\\rightarrow, \\longrightarrow, \\Rightarrow, \\Longrightarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Up arrow",
+    formula: `\\uparrow, \\Uparrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Down arrow",
+    formula: `\\downarrow, \\Downarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Left and right arrow",
+    formula: `\\leftrightarrow, \\longleftrightarrow, \\Leftrightarrow, \\Longleftrightarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Up and down arrow",
+    formula: `\\updownarrow, \\Updownarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Maplet arrow / maps to",
+    formula: `\\mapsto, \\longmapsto`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Hook arrow",
+    formula: `\\hookleftarrow, \\hookrightarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Harpoon arrows",
+    formula: `\\leftharpoonup, \\rightharpoonup, \\leftharpoondown, \\rightharpoondown`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+  {
+    name: "Ordinal or Intercardinal direction arrows",
+    formula: `\\nearrow, \\searrow, \\swarrow, \\nwarrow`,
+    search: "",
+    tags: [Category.Arrow],
+  },
+
   // Formulas
   {
     name: "Pythagoras Theorem",
