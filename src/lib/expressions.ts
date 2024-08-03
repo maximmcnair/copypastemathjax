@@ -147,7 +147,7 @@ export const expressions: Expression[] = [
   },
   {
     name: "Rational numbers",
-    formula: `\\mathbb{Z}`,
+    formula: `\\mathbb{Q}`,
     search: "",
     tags: [Category.Logic, Category.SetTheory],
   },
